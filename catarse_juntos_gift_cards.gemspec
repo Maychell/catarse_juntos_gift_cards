@@ -1,17 +1,17 @@
 $:.push File.expand_path("../lib", __FILE__)
 
 # Maintain your gem's version:
-require "catarse_lbm_gift_cards/version"
+require "catarse_juntos_gift_cards/version"
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |s|
-  s.name        = "catarse_lbm_gift_cards"
-  s.version     = CatarseLbmGiftCards::VERSION
+  s.name        = "catarse_juntos_gift_cards"
+  s.version     = CatarseJuntosGiftCards::VERSION
   s.authors     = ["Daniel Weinmann"]
   s.email       = ["danielweinmann@gmail.com"]
-  s.homepage    = "https://github.com/danielweinmann/catarse_lbm_gift_cards"
-  s.summary     = "Catarse payment engine for LittleBigMoney Gift Cards"
-  s.description = "Catarse payment engine for LittleBigMoney Gift Cards"
+  s.homepage    = "https://github.com/danielweinmann/catarse_juntos_gift_cards"
+  s.summary     = "Catarse payment engine for Juntos Gift Cards"
+  s.description = "Catarse payment engine for Juntos Gift Cards"
 
   s.files         = `git ls-files`.split($\)
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})

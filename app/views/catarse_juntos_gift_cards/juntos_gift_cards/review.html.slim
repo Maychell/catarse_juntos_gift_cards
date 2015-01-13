@@ -1,8 +1,8 @@
-- scope = 'projects.backers.review.lbm_gift_cards_info'
+- scope = 'projects.backers.review.juntos_gift_cards_info'
 
 h3= t('title', scope: scope)
-#catarse_lbm_gift_cards_form
-  = form_tag pay_lbm_gift_card_path(params[:id]) do
+#catarse_juntos_gift_cards_form
+  = form_tag pay_juntos_gift_card_path(params[:id]) do
     .clearfix
     .bootstrap-twitter
       = label_tag 'coupon', t('coupon', scope: scope)

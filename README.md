@@ -1,12 +1,12 @@
-# CatarseLbmGiftCards
+# CatarseJuntosGiftCards
 
-[Catarse](http://github.com/catarse/catarse) payment engine for LittleBigMoney Gift Cards
+[Catarse](http://github.com/catarse/catarse) payment engine for Juntos Gift Cards
 
 ## Installation
 
 Add this line to your Catarse application's Gemfile:
 
-    gem 'catarse_lbm_gift_cards'
+    gem 'catarse_juntos_gift_cards'
 
 And then execute:
 
@@ -16,13 +16,13 @@ And then execute:
 
 Configure the routes for your Catarse application. Add the following lines in the routes file (config/routes.rb):
 
-    mount CatarseLbmGiftCards::Engine => "/", :as => "catarse_lbm_gift_cards"
+    mount CatarseJuntosGiftCards::Engine => "/", :as => "catarse_juntos_gift_cards"
 
 ## Development environment setup
 
 Clone the repository:
 
-    $ git clone git://github.com/danielweinmann/catarse_lbm_gift_cards.git
+    $ git clone git://github.com/danielweinmann/catarse_juntos_gift_cards.git
 
 Add the Catarse code into test/dummy:
 

@@ -1,11 +1,11 @@
 # encoding: utf-8
-class CatarseLbmGiftCards::LbmGiftCardsController < ApplicationController
+class CatarseJuntosGiftCards::JuntosGiftCardsController < ApplicationController
 
   skip_before_filter :force_http
   
   layout :false
 
-  SCOPE = 'projects.backers.review.lbm_gift_cards_info'
+  SCOPE = 'projects.backers.review.juntos_gift_cards_info'
 
   def review
   end
@@ -13,11 +13,11 @@ class CatarseLbmGiftCards::LbmGiftCardsController < ApplicationController
   def pay
     backer = current_user.backs.not_confirmed.find params[:id]
     if backer
-      response = HTTParty.put("https://lbmgiftcards.herokuapp.com/gift_cards/#{params[:coupon]}/redeem", headers: {'Authorization' => "Token token=\"#{PaymentEngines.configuration[:lbm_gift_cards_api_key]}\""}, body: { value: backer.value.to_i })
+      response = HTTParty.put("https://juntosgiftcards.herokuapp.com/gift_cards/#{params[:coupon]}/redeem", headers: {'Authorization' => "Token token=\"#{PaymentEngines.configuration[:juntos_gift_cards_api_key]}\""}, body: { value: backer.value.to_i })
       case response.code
       when 200, 204, 406
-        if Backer.confirmed.where(payment_method: 'LbmGiftCard', payment_id: params[:coupon]).count == 0
-          backer.update_attribute :payment_method, 'LbmGiftCard'
+        if Backer.confirmed.where(payment_method: 'JuntosGiftCard', payment_id: params[:coupon]).count == 0
+          backer.update_attribute :payment_method, 'JuntosGiftCard'
           backer.update_attribute :payment_id, params[:coupon]
           backer.confirm!
           flash[:success] = t('success', scope: SCOPE)

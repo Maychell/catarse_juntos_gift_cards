@@ -1,4 +1,4 @@
 require 'spec_helper'
 
-describe CatarseLbmGiftCards::Payment::LbmGiftCardsController do
+describe CatarseJuntosGiftCards::Payment::JuntosGiftCardsController do
 end
