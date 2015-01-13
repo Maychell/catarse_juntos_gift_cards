@@ -1,1 +1,5 @@
-PaymentEngines.register({name: 'juntos_gift_cards', review_path: ->(backer){ CatarseJuntosGiftCards::Engine.routes.url_helpers.review_juntos_gift_card_path(backer) }, locale: 'en'})
+begin
+  PaymentEngines.register(CatarseJuntosGiftCards::PaymentEngine.new)
+rescue Exception => e
+  puts "Error while registering payment engine: #{e}"
+end

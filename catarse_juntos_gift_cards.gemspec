@@ -16,7 +16,7 @@ Gem::Specification.new do |s|
   s.files         = `git ls-files`.split($\)
   s.test_files    = s.files.grep(%r{^(test|spec|features)/})
 
-  s.add_dependency "rails", "~> 3.2.6"
+  s.add_dependency "rails", "~> 4.1.6"
   s.add_development_dependency "httparty"
   s.add_development_dependency "rspec-rails"
   s.add_development_dependency "fakeweb"
